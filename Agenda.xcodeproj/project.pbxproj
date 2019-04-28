@@ -12,9 +12,9 @@
 		03AA17561FC84154003CB2B8 /* Agenda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03AA17541FC84154003CB2B8 /* Agenda.xcdatamodeld */; };
 		03AA17581FC84154003CB2B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AA17571FC84154003CB2B8 /* Assets.xcassets */; };
 		03AA175B1FC84154003CB2B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AA17591FC84154003CB2B8 /* LaunchScreen.storyboard */; };
-		03AA17661FC84353003CB2B8 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA17651FC84353003CB2B8 /* HomeTableViewController.swift */; };
-		03AA17681FC843B1003CB2B8 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA17671FC843B1003CB2B8 /* HomeTableViewCell.swift */; };
-		03AA176D1FC8515A003CB2B8 /* AlunoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA176C1FC8515A003CB2B8 /* AlunoViewController.swift */; };
+		EB5EB3D22275DACD000DB83B /* AlunoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EB3D02275DACC000DB83B /* AlunoViewController.swift */; };
+		EB5EB3D32275DACD000DB83B /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EB3D12275DACC000DB83B /* HomeTableViewController.swift */; };
+		EB5EB3D62275DAD9000DB83B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EB3D52275DAD9000DB83B /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		03AA17571FC84154003CB2B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03AA175A1FC84154003CB2B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03AA175C1FC84154003CB2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03AA17651FC84353003CB2B8 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		03AA17671FC843B1003CB2B8 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		03AA176C1FC8515A003CB2B8 /* AlunoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoViewController.swift; sourceTree = "<group>"; };
+		EB5EB3D02275DACC000DB83B /* AlunoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlunoViewController.swift; sourceTree = "<group>"; };
+		EB5EB3D12275DACC000DB83B /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		EB5EB3D52275DAD9000DB83B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +60,10 @@
 		03AA174C1FC84154003CB2B8 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				EB5EB3D72275DAF5000DB83B /* model */,
+				EB5EB3D42275DAD9000DB83B /* views */,
+				EB5EB3CF2275DACC000DB83B /* controller */,
 				03AA174D1FC84154003CB2B8 /* AppDelegate.swift */,
-				03AA17621FC8433E003CB2B8 /* Home */,
-				03AA17691FC84A2D003CB2B8 /* Alunos */,
 				03AA17511FC84154003CB2B8 /* Main.storyboard */,
 				03AA17571FC84154003CB2B8 /* Assets.xcassets */,
 				03AA17591FC84154003CB2B8 /* LaunchScreen.storyboard */,
@@ -72,53 +73,29 @@
 			path = Agenda;
 			sourceTree = "<group>";
 		};
-		03AA17621FC8433E003CB2B8 /* Home */ = {
+		EB5EB3CF2275DACC000DB83B /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				03AA17641FC8433E003CB2B8 /* View */,
-				03AA17631FC8433E003CB2B8 /* Controller */,
+				EB5EB3D02275DACC000DB83B /* AlunoViewController.swift */,
+				EB5EB3D12275DACC000DB83B /* HomeTableViewController.swift */,
 			);
-			path = Home;
+			path = controller;
 			sourceTree = "<group>";
 		};
-		03AA17631FC8433E003CB2B8 /* Controller */ = {
+		EB5EB3D42275DAD9000DB83B /* views */ = {
 			isa = PBXGroup;
 			children = (
-				03AA17651FC84353003CB2B8 /* HomeTableViewController.swift */,
+				EB5EB3D52275DAD9000DB83B /* HomeTableViewCell.swift */,
 			);
-			path = Controller;
-			sourceTree = "<group>";
+			name = views;
+			path = Agenda/views;
+			sourceTree = SOURCE_ROOT;
 		};
-		03AA17641FC8433E003CB2B8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				03AA17671FC843B1003CB2B8 /* HomeTableViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		03AA17691FC84A2D003CB2B8 /* Alunos */ = {
-			isa = PBXGroup;
-			children = (
-				03AA176B1FC84A2D003CB2B8 /* View */,
-				03AA176A1FC84A2D003CB2B8 /* Controller */,
-			);
-			path = Alunos;
-			sourceTree = "<group>";
-		};
-		03AA176A1FC84A2D003CB2B8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				03AA176C1FC8515A003CB2B8 /* AlunoViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		03AA176B1FC84A2D003CB2B8 /* View */ = {
+		EB5EB3D72275DAF5000DB83B /* model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = View;
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,10 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03AA176D1FC8515A003CB2B8 /* AlunoViewController.swift in Sources */,
-				03AA17661FC84353003CB2B8 /* HomeTableViewController.swift in Sources */,
+				EB5EB3D32275DACD000DB83B /* HomeTableViewController.swift in Sources */,
+				EB5EB3D62275DAD9000DB83B /* HomeTableViewCell.swift in Sources */,
 				03AA17561FC84154003CB2B8 /* Agenda.xcdatamodeld in Sources */,
-				03AA17681FC843B1003CB2B8 /* HomeTableViewCell.swift in Sources */,
+				EB5EB3D22275DACD000DB83B /* AlunoViewController.swift in Sources */,
 				03AA174E1FC84154003CB2B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
