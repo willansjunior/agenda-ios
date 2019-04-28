@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlunoViewController: UIViewController {
+class AlunoViewController: UIViewController, ImagePickerFotoSelecionada {
     
     // MARK: - IBOutlets
     
@@ -23,11 +23,14 @@ class AlunoViewController: UIViewController {
     @IBOutlet weak var textFieldSite: UITextField!
     @IBOutlet weak var textFieldNota: UITextField!
     
+    let imagePicker = ImagePicker()
+    
     // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.arredondaView()
+        self.setup()
         NotificationCenter.default.addObserver(self, selector: #selector(aumentarScrollView(_:)), name: .UIKeyboardWillShow, object: nil)
     }
     
@@ -36,6 +39,11 @@ class AlunoViewController: UIViewController {
     }
     
     // MARK: - Métodos
+    
+    //Informado que a classe implementara o delegate do ImagePickerFotoSelecionada
+    func setup() {
+        imagePicker.delegate = self
+    }
     
     func arredondaView() {
         self.viewImagemAluno.layer.cornerRadius = self.viewImagemAluno.frame.width / 2
@@ -47,10 +55,24 @@ class AlunoViewController: UIViewController {
         self.scrollViewPrincipal.contentSize = CGSize(width: self.scrollViewPrincipal.frame.width, height: self.scrollViewPrincipal.frame.height + self.scrollViewPrincipal.frame.height/2)
     }
     
+    // Mark: - Delegate
+    
+    func imagePickerFotoSelecionada(_ foto: UIImage) {
+        imageAluno.image = foto
+    }
+    
     // MARK: - IBActions
     
     @IBAction func buttonFoto(_ sender: UIButton) {
-        // TO DO
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let camera = UIImagePickerController()
+            camera.sourceType = .camera
+            
+            //setando delegate
+            camera.delegate = imagePicker
+            
+            self.present(camera, animated: true, completion: nil)
+        }
     }
     
     @IBAction func stepperNota(_ sender: UIStepper) {

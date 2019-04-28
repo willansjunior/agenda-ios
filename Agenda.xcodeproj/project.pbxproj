@@ -12,9 +12,10 @@
 		03AA17561FC84154003CB2B8 /* Agenda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03AA17541FC84154003CB2B8 /* Agenda.xcdatamodeld */; };
 		03AA17581FC84154003CB2B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AA17571FC84154003CB2B8 /* Assets.xcassets */; };
 		03AA175B1FC84154003CB2B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AA17591FC84154003CB2B8 /* LaunchScreen.storyboard */; };
+		EB3EBF702275EB1B00C46AF1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EBF6F2275EB1B00C46AF1 /* ImagePicker.swift */; };
 		EB5EB3D22275DACD000DB83B /* AlunoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EB3D02275DACC000DB83B /* AlunoViewController.swift */; };
 		EB5EB3D32275DACD000DB83B /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EB3D12275DACC000DB83B /* HomeTableViewController.swift */; };
-		EB5EB3D62275DAD9000DB83B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EB3D52275DAD9000DB83B /* HomeTableViewCell.swift */; };
+		EB5EB3D92275E8E8000DB83B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EB3D82275E8E8000DB83B /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +26,10 @@
 		03AA17571FC84154003CB2B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03AA175A1FC84154003CB2B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03AA175C1FC84154003CB2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB3EBF6F2275EB1B00C46AF1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		EB5EB3D02275DACC000DB83B /* AlunoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlunoViewController.swift; sourceTree = "<group>"; };
 		EB5EB3D12275DACC000DB83B /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		EB5EB3D52275DAD9000DB83B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		EB5EB3D82275E8E8000DB83B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		03AA174C1FC84154003CB2B8 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				EB3EBF6E2275EAFC00C46AF1 /* component */,
 				EB5EB3D72275DAF5000DB83B /* model */,
 				EB5EB3D42275DAD9000DB83B /* views */,
 				EB5EB3CF2275DACC000DB83B /* controller */,
@@ -73,9 +76,18 @@
 			path = Agenda;
 			sourceTree = "<group>";
 		};
+		EB3EBF6E2275EAFC00C46AF1 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EBF6F2275EB1B00C46AF1 /* ImagePicker.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
 		EB5EB3CF2275DACC000DB83B /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB5EB3D82275E8E8000DB83B /* HomeTableViewCell.swift */,
 				EB5EB3D02275DACC000DB83B /* AlunoViewController.swift */,
 				EB5EB3D12275DACC000DB83B /* HomeTableViewController.swift */,
 			);
@@ -85,7 +97,6 @@
 		EB5EB3D42275DAD9000DB83B /* views */ = {
 			isa = PBXGroup;
 			children = (
-				EB5EB3D52275DAD9000DB83B /* HomeTableViewCell.swift */,
 			);
 			name = views;
 			path = Agenda/views;
@@ -171,8 +182,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB5EB3D32275DACD000DB83B /* HomeTableViewController.swift in Sources */,
-				EB5EB3D62275DAD9000DB83B /* HomeTableViewCell.swift in Sources */,
+				EB5EB3D92275E8E8000DB83B /* HomeTableViewCell.swift in Sources */,
 				03AA17561FC84154003CB2B8 /* Agenda.xcdatamodeld in Sources */,
+				EB3EBF702275EB1B00C46AF1 /* ImagePicker.swift in Sources */,
 				EB5EB3D22275DACD000DB83B /* AlunoViewController.swift in Sources */,
 				03AA174E1FC84154003CB2B8 /* AppDelegate.swift in Sources */,
 			);
@@ -312,7 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LF4G5DZZMF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Agenda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apps.Agenda;
@@ -327,7 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LF4G5DZZMF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Agenda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apps.Agenda;
